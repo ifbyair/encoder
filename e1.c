@@ -53,9 +53,10 @@ struct encoder *setupencoder(int pin_a, int pin_b)
 
 int main(int ac, char **av){
 
+    wiringPiSetup();
     struct encoder *enc = setupencoder(3,2);
 
     while(1){
-        printf("Value = %ld\n",encoder->value);
+        printf("Value = %ld\n",enc->value);
     }
 }
